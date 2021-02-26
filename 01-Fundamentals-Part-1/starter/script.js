@@ -197,6 +197,17 @@ if (birthYear <= 2000) {
 console.log(century);
 //-------------------------------------------------------------------------------------------------------------------
 // Coding challenge # 2
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+HINT: Use an if/else statement 😉
+
+GOOD LUCK 😀
+*/
+/*
 // Test data 1
 const massMark = 78;
 const heightMark = 1.69;
@@ -239,4 +250,97 @@ console.log('23' > '18');
 let n = '1' + 1; // '11'
 n = n - 1;
 console.log(n);
+//-------------------------------------------------------------------------------------------------------------------
+// Truthy and falsy values
+// 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 100;
+if (money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log('You should get a job!');
+}
+
+let height = 0;
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+//-------------------------------------------------------------------------------------------------------------------
+// Equality operators: == vs. ===
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)'); // recommended
+
+if (age == 18) console.log('You just became an adult :D (loose)'); // not recommended
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // 22 === 23 -> FALSE
+    console.log('Cool! 23 is an amazing number!');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number');
+} else if (favourite === 9) {
+    console.log('9 is also a cool number');
+} else {
+    console.log('Number is not 23 or 7 or 9');
+}
+
+if (favourite !== 23) console.log('Why not 23?');
+//-------------------------------------------------------------------------------------------------------------------
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+//-------------------------------------------------------------------------------------------------------------------
+// Coding challenge # 3
+
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if(scoreDolphins > scoreKoalas) {
+//     console.log(`Dolphins win the trophy 🏆`);
+// } else if(scoreKoalas > scoreDolphins) {
+//     console.log(`Koalas win the trophy 🏆`);
+// } else if(scoreDolphins === scoreKoalas) {
+//     console.log(`Both win the trophy!`);
+// } else console.log(`No winner`);
+
+// BONUS 1
+const scoreDolphins = (97 + 112 + 80) / 3;
+const scoreKoalas = (109 + 95 + 50) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if(scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log(`Dolphins win the trophy 🏆`);
+} else if(scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log(`Koalas win the trophy 🏆`);
+} else if(scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log(`Both win the trophy!`);
+} else console.log(`No one wins the trophy 😭`);
 */
