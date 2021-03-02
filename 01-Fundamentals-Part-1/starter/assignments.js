@@ -69,3 +69,6 @@ if (language === 'english' && !population < 50 && !isIsland) {
     console.log(`${country} does not meet your criteria :(`);
 }
 
+population = 111;
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`,);
+
