@@ -50,3 +50,75 @@ const describePopulation = function(country, population) {
 describePopulation('China', 1441);
 describePopulation('Japan', 126);
 describePopulation('Philippines', 111);
+
+// Introduction to arrays
+const populations = [1441, 126, 111, 146]; // 146 = Russia
+console.log(populations.length === 4);
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+console.log(percentages);
+
+// Basic array operations (methods)
+const neighbours = ['Malaysia', 'Indonesia', 'Japan'];
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf('Malaysia')] = 'India';
+console.log(neighbours);
+
+const myCountry = {
+    country: 'Philippines',
+    capital: 'Manila',
+    language: 'tagalog',
+    population: 111,
+    neighbours: ['Malaysia', 'Indonesia', 'Japan']
+};
+
+// Dot vs. Bracket Notation
+// 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry['language']}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`,);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
+
+// Object Methods
+const myCountry2 = {
+    country: 'Philippines',
+    capital: 'Manila',
+    language: 'tagalog',
+    population: 111,
+    neighbours: ['Malaysia', 'Indonesia', 'Japan'],
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million ${this['language']}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+    },
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true : false;
+    }
+    
+    // Even simpler version (see why this works...)
+    // this.isIsland = !Boolean(this.neighbours.length);
+};
+
+myCountry2.describe();
+myCountry2.checkIsland();
+console.log(myCountry2);
+
+// Iteration: The for Loop
+for(let voter = 1; voter <= 50; voter++) {
+    console.log(`Voter number ${voter} is currently voting`);
+}
