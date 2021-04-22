@@ -52,15 +52,15 @@ describePopulation('Japan', 126);
 describePopulation('Philippines', 111);
 
 // Introduction to arrays
-const populations = [1441, 126, 111, 146]; // 146 = Russia
-console.log(populations.length === 4);
-const percentages = [
-    percentageOfWorld1(populations[0]),
-    percentageOfWorld1(populations[1]),
-    percentageOfWorld1(populations[2]),
-    percentageOfWorld1(populations[3])
-];
-console.log(percentages);
+// const populations = [1441, 126, 111, 146]; // 146 = Russia
+// console.log(populations.length === 4);
+// const percentages = [
+//     percentageOfWorld1(populations[0]),
+//     percentageOfWorld1(populations[1]),
+//     percentageOfWorld1(populations[2]),
+//     percentageOfWorld1(populations[3])
+// ];
+// console.log(percentages);
 
 // Basic array operations (methods)
 const neighbours = ['Malaysia', 'Indonesia', 'Japan'];
@@ -122,3 +122,42 @@ console.log(myCountry2);
 for(let voter = 1; voter <= 50; voter++) {
     console.log(`Voter number ${voter} is currently voting`);
 }
+
+// Looping Arrays, Breaking and Continuing
+// const populations = [1441, 126, 111, 146];
+
+// const percentages2 = [];
+
+// for(let i = 0; i < populations.length; i++) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentages2.push(perc);
+// }
+
+// console.log(percentages2);
+
+// Looping Backwards and Loops in Loops
+const listOfNeighbours = [
+    ['Canada', 'Mexico'], 
+    ['Spain'],
+    ['Norway', 'Sweden','Russia'],
+];
+
+for(let i = 0; i < listOfNeighbours.length; i++) {
+    for(let country = 0; country < listOfNeighbours[i].length; country++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][country]}`);
+    }
+}
+
+// The while Loop
+let populations = [1441, 126, 111, 146];
+
+const percentages3 = [];
+let i = 0;
+while(i < populations.length) {
+    const perc = percentageOfWorld1(populations[i]);
+    percentages3.push(perc);
+    i++;
+}
+
+console.log(percentages3);
+
